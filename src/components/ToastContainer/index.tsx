@@ -1,7 +1,6 @@
 import React from 'react';
 
-import {FiAlertCircle, FiXCircle} from 'react-icons/fi';
-import { ToastMessage, useToast } from '../../hooks/toast';
+import { ToastMessage } from '../../hooks/toast';
 
 import { Container} from './styles';
 import Toast from './Toast';
@@ -11,8 +10,6 @@ interface ToastContainerProps {
 }
 
 const ToastContainer: React.FC<ToastContainerProps> = ({messages}) => {
-  const { removeToast } = useToast();
-
   return (
     <Container>
       {messages.map(message => (
